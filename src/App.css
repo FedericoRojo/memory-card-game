@@ -1,0 +1,72 @@
+.body {
+  background-color: #282c34;
+}
+/* General Game Container */
+.game-container {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #282c34;
+  font-family: Arial, sans-serif;
+}
+
+/* Game Board Styles */
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  background-color: #444;
+  padding: 10px;
+  border-radius: 10px;
+  border: 5px solid #888;
+}
+
+/* Each cell (photo) in the GameBoard */
+.game-board > .photo-cell {
+  width: 100px;
+  height: 100px;
+  background-color: #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 3px solid #888;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+/* Hover and Clicked Effects */
+.game-board .photo-cell:hover {
+  transform: scale(1.05);
+  background-color: #888;
+}
+
+.game-board .photo-cell.clicked {
+  background-color: #ff4d4d;
+  transform: scale(0.95);
+}
+
+/* Score Board Styles */
+.score-board {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  border: 3px solid #444;
+  color: #fff;
+  min-width: 200px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.score-board h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.score-board p {
+  font-size: 16px;
+  margin: 5px 0;
+}
